@@ -1,6 +1,6 @@
-=============
+==========
 ROLE MOTD
-=============
+==========
 
 .. image:: https://img.shields.io/github/license/adfinis-sygroup/ansible-role-motd.svg?style=flat-square
   :target: https://github.com/adfinis-sygroup/ansible-role-motd/blob/master/LICENSE
@@ -65,3 +65,4 @@ Author Information
 motd role was written by:
 
 * Adfinis SyGroup AG | `Website <https://www.adfinis-sygroup.ch/>`_ | `Twitter <https://twitter.com/adfinissygroup>`_ | `GitHub <https://github.com/adfinis-sygroup>`_
+
