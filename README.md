@@ -34,6 +34,9 @@ motd_issue_message: |
   -------------------------------------------------
           This system is managed by Ansible
   -------------------------------------------------
+
+# If to install and use cowsay in the motd messages
+motd_cowsay: false
 ```
 
 ## [Requirements](#requirements)
