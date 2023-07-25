@@ -4,3 +4,8 @@
   ansible.builtin.package:
     name: '{{ motd_packages }}'
     state: present
+
+- name: install cowsay packages
+  ansible.builtin.package:
+    name: 'cowsay'
+    state: present

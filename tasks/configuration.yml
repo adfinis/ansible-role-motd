@@ -1,5 +1,19 @@
 ---
 
+- name: wrap /etc/issue message in cowsay
+  ansible.builtin.shell:
+    cmd: "/usr/games/cowsay"
+    stdin: "{{ motd_issue_message }}"
+  register: motd_issue_cowsay_message
+  when: motd_cowsay is true
+
+- name: wrap /etc/motd message in cowsay
+  ansible.builtin.shell:
+    cmd: "/usr/games/cowsay"
+    stdin: "{{ motd_message }}"
+  register: motd_cowsay_message
+  when: motd_cowsay is true
+
 - name: configure motd
   ansible.builtin.template:
     src: etc/motd.j2
