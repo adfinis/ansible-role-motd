@@ -1,7 +1,7 @@
 ---
 
 - name: configure motd
-  template:
+  ansible.builtin.template:
     src: etc/motd.j2
     dest: '{{ motd_file }}'
     owner: root
@@ -12,7 +12,7 @@
     setype: etc_t
 
 - name: configure issue
-  template:
+  ansible.builtin.template:
     src: etc/issue.j2
     dest: '{{ motd_issue_file }}'
     owner: root
@@ -23,7 +23,7 @@
     setype: etc_t
 
 - name: configure issue.net
-  template:
+  ansible.builtin.template:
     src: etc/issue.j2
     dest: '{{ motd_issue_net_file }}'
     owner: root

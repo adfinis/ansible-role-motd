@@ -1,6 +1,6 @@
 ---
 
 - name: install motd related packages
-  package:
+  ansible.builtin.package:
     name: '{{ motd_packages }}'
     state: present
