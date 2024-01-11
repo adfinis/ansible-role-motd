@@ -1,20 +1,20 @@
 ---
 
-- name: wrap /etc/issue message in cowsay
+- name: Wrap /etc/issue message in cowsay
   ansible.builtin.shell:
     cmd: "/usr/games/cowsay"
     stdin: "{{ motd_issue_message }}"
   register: motd_issue_cowsay_message
   when: motd_cowsay is true
 
-- name: wrap /etc/motd message in cowsay
+- name: Wrap /etc/motd message in cowsay
   ansible.builtin.shell:
     cmd: "/usr/games/cowsay"
     stdin: "{{ motd_message }}"
   register: motd_cowsay_message
   when: motd_cowsay is true
 
-- name: configure motd
+- name: Configure motd
   ansible.builtin.template:
     src: etc/motd.j2
     dest: '{{ motd_file }}'
@@ -25,7 +25,7 @@
     serole: object_r
     setype: etc_t
 
-- name: configure issue
+- name: Configure issue
   ansible.builtin.template:
     src: etc/issue.j2
     dest: '{{ motd_issue_file }}'
@@ -36,7 +36,7 @@
     serole: object_r
     setype: etc_t
 
-- name: configure issue.net
+- name: Configure issue.net
   ansible.builtin.template:
     src: etc/issue.j2
     dest: '{{ motd_issue_net_file }}'
