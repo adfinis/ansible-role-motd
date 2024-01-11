@@ -1,7 +1,7 @@
 ---
 
 - name: Wrap /etc/issue message in cowsay
-  ansible.builtin.shell:
+  ansible.builtin.command:
     cmd: "/usr/games/cowsay"
     stdin: "{{ motd_issue_message }}"
   changed_when: false
@@ -9,7 +9,7 @@
   when: motd_cowsay is true
 
 - name: Wrap /etc/motd message in cowsay
-  ansible.builtin.shell:
+  ansible.builtin.command:
     cmd: "/usr/games/cowsay"
     stdin: "{{ motd_message }}"
   changed_when: false
