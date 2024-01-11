@@ -4,6 +4,7 @@
   ansible.builtin.shell:
     cmd: "/usr/games/cowsay"
     stdin: "{{ motd_issue_message }}"
+  changed_when: false
   register: motd_issue_cowsay_message
   when: motd_cowsay is true
 
@@ -11,6 +12,7 @@
   ansible.builtin.shell:
     cmd: "/usr/games/cowsay"
     stdin: "{{ motd_message }}"
+  changed_when: false
   register: motd_cowsay_message
   when: motd_cowsay is true
 
