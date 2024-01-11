@@ -51,10 +51,10 @@ The minimum version of Ansible required is 2.12.
 
 ## [License](#license)
 
-`GPL-3.0 <https://github.com/adfinis-sygroup/ansible-role-motd/blob/master/LICENSE>`_
+`GPL-3.0 <https://github.com/adfinis-sygroup/ansible-role-motd/blob/master/LICENSE>`
 
 ## [Author Information](#author-information)
 
 motd role was written by:
 
-* Adfinis AG | `Website <https://www.adfinis.com/>`_ | `Twitter <https://twitter.com/adfinis>`_ | `GitHub <https://github.com/adfinis>`_
+* Adfinis AG | [Website](https://www.adfinis.com/) | [Twitter](https://twitter.com/adfinis) | [GitHub](https://github.com/adfinis)
