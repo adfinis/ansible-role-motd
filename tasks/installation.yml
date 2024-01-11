@@ -9,3 +9,4 @@
   ansible.builtin.package:
     name: 'cowsay'
     state: present
+  when: motd_cowsay is true
