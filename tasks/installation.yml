@@ -1,11 +1,11 @@
 ---
 
-- name: install motd related packages
+- name: Install motd related packages
   ansible.builtin.package:
     name: '{{ motd_packages }}'
     state: present
 
-- name: install cowsay packages
+- name: Install cowsay packages
   ansible.builtin.package:
     name: 'cowsay'
     state: present
