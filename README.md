@@ -48,3 +48,13 @@ motd_cowsay: false
 This role is only compatible with debian bullseye and bookworm.
 
 The minimum version of Ansible required is 2.12.
+
+## [License](#license)
+
+`GPL-3.0 <https://github.com/adfinis-sygroup/ansible-role-motd/blob/master/LICENSE>`_
+
+## [Author Information](#author-information)
+
+motd role was written by:
+
+* Adfinis AG | `Website <https://www.adfinis.com/>`_ | `Twitter <https://twitter.com/adfinis>`_ | `GitHub <https://github.com/adfinis>`_
