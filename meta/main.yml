@@ -15,5 +15,9 @@ galaxy_info:
       versions:
         - bullseye
         - bookworm
+    - name: EL
+      versions:
+        - "7"
+        - "8"
   galaxy_tags:
     - motd
