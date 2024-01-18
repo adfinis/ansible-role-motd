@@ -3,25 +3,22 @@
 dependencies: []
 
 galaxy_info:
-  role_name: motd
-  author: 'Adfinis SyGroup AG'
+  role_name: 'motd'
+  namespace: 'adfinis'
+  author: 'Adfinis AG'
   description: 'Set the MOTD'
-  company: 'Adfinis SyGroup AG'
+  company: 'Adfinis AG'
   license: 'GNU General Public License v3'
-  min_ansible_version: '2.0.0'
+  min_ansible_version: '2.12.0'
   platforms:
     - name: Debian
       versions:
-        - wheezy
-        - jessie
-        - stretch
-    - name: Ubuntu
-      versions:
-        - trusty
-        - xenial
+        - bullseye
+        - bookworm
     - name: EL
       versions:
-        - 6
-        - 7
+        - "7"
+        - "8"
+        - "9"
   galaxy_tags:
     - motd

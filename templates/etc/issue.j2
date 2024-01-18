@@ -1,1 +1,1 @@
-{{ motd_issue_message }}
+{{ motd_cowsay | ternary(motd_issue_cowsay_message.stdout, motd_issue_message) }}

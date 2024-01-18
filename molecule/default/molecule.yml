@@ -1,0 +1,30 @@
+---
+
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+
+platforms:
+  - name: instance
+    image: localhost/debian-systemd:bookworm
+    pre_build_image: true
+    command: /lib/systemd/systemd
+    privileged: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /tmp/.X11-unix/X0:/tmp/.X11-unix/X0
+    devices:
+      - /dev/fuse:/dev/fuse
+    security_opts:
+      - seccomp=unconfined
+    storage_opt: overlay.mount_program=/usr/bin/fuse-overlayfs
+    systemd: true
+
+provisioner:
+  name: ansible
+
+verifier:
+  name: ansible
