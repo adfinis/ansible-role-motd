@@ -1,5 +1,4 @@
 ---
-
 # MOTD file
 motd_file: /etc/motd
 
@@ -23,3 +22,12 @@ motd_issue_message: |
 
 # If to install and use cowsay in the motd messages
 motd_cowsay: false
+
+# Enable or disable writing of the motd file
+motd_enable_motd: true
+
+# Enable or disable writing of the issue file
+motd_enable_issue: true
+
+# Enable or disable writing of the issue.net file
+motd_enable_issue_net: true
