@@ -26,6 +26,7 @@
     seuser: system_u
     serole: object_r
     setype: etc_t
+  when: motd_enable_motd
 
 - name: Configure issue
   ansible.builtin.template:
@@ -37,6 +38,7 @@
     seuser: system_u
     serole: object_r
     setype: etc_t
+  when: motd_enable_issue
 
 - name: Configure issue.net
   ansible.builtin.template:
@@ -48,3 +50,4 @@
     seuser: system_u
     serole: object_r
     setype: etc_t
+  when: motd_enable_issue_net
