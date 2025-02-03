@@ -51,3 +51,54 @@
     serole: object_r
     setype: etc_t
   when: motd_enable_issue_net
+
+- name: Configure update-motd.d on Debian/Ubuntu
+  when: ansible_os_family in ['Debian', 'Ubuntu']
+  block:
+    - name: Copy update-motd.d files
+      ansible.builtin.copy:
+        src: '{{ item.src }}'
+        dest: '/etc/update-motd.d/{{ item.name }}'
+        owner: root
+        group: root
+        mode: 0755
+        seuser: system_u
+        serole: object_r
+        setype: etc_t
+      loop: '{{ motd_update_motd_files }}'
+
+    - name: Write update-motd.d file contents
+      ansible.builtin.copy:
+        content: '{{ item.content }}'
+        dest: '/etc/update-motd.d/{{ item.name }}'
+        owner: root
+        group: root
+        mode: 0755
+        seuser: system_u
+        serole: object_r
+        setype: etc_t
+      loop: '{{ motd_update_motd_file_contents }}'
+
+    - name: Write update-motd.d templates
+      ansible.builtin.template:
+        src: '{{ item.src }}'
+        dest: '/etc/update-motd.d/{{ item.name }}'
+        owner: root
+        group: root
+        mode: 0755
+        seuser: system_u
+        serole: object_r
+        setype: etc_t
+      loop: '{{ motd_update_motd_templates }}'
+
+    - name: Write update-motd.d template contents
+      ansible.builtin.template:
+        src: '{{ item.content }}'
+        dest: '/etc/update-motd.d/{{ item.name }}'
+        owner: root
+        group: root
+        mode: 0755
+        seuser: system_u
+        serole: object_r
+        setype: etc_t
+      loop: '{{ motd_update_motd_template_contents }}'
