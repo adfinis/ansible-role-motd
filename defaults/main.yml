@@ -31,3 +31,35 @@ motd_enable_issue: true
 
 # Enable or disable writing of the issue.net file
 motd_enable_issue_net: true
+
+# List of files to copy to /etc/update-motd.d/
+# e.g.:
+# motd_update_motd_files:
+#   - name: 00-header
+#     src: /path/to/00-header
+motd_update_motd_files: []
+
+# List of content to write to /etc/update-motd.d/ files
+# e.g.:
+# motd_update_motd_content:
+#   - name: 00-header
+#     content: |
+#       #!/bin/sh
+#       echo "Hello, world!"
+motd_update_motd_file_contents: []
+
+# List of templates to write to /etc/update-motd.d/
+# e.g.:
+# motd_update_motd_template_contents:
+#   - name: 00-header
+#     src: /path/to/00-header.j2
+motd_update_motd_templates: []
+
+# List of content to write to /etc/update-motd.d/ templates
+# e.g.:
+# motd_update_motd_template_contents:
+#   - name: 00-header
+#     content: |
+#       #!/bin/sh
+#       echo "Hello, world - from {{ ansible_hostname }}!"
+motd_update_motd_template_contents: []

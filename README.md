@@ -37,6 +37,13 @@ motd_issue_message: |
 
 # If to install and use cowsay in the motd messages
 motd_cowsay: false
+
+# Add your own script templates
+motd_update_motd_template_contents:
+  - name: 00-header
+    content: |
+      #!/bin/sh
+      echo "Hello, world - from {{ ansible_hostname }}!"
 ```
 
 ## [Requirements](#requirements)
@@ -57,4 +64,4 @@ The minimum version of Ansible required is 2.12.
 
 motd role was written by:
 
-* Adfinis AG | [Website](https://www.adfinis.com/) | [Twitter](https://twitter.com/adfinis) | [GitHub](https://github.com/adfinis)
+* Adfinis AG | [Website](https://www.adfinis.com/) | [GitHub](https://github.com/adfinis)
